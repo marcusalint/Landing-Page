@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import {Link as LinkRouter} from 'react-router-dom'
 
-import {Link as LinkSmootheScroll} from 'react-router-dom'
+import {Link as LinkSmoothScroll} from 'react-scroll'
 
 export const Nav=styled.nav`
   background: #000;
@@ -48,7 +48,7 @@ export const NavLogo = styled(LinkRouter)`
 `
 
 export const MobileIcon = styled.div`
-  display: nonel
+  display: none;
   @media screen and (max-width: 758px) {
     display: block;
     position: absolute;
@@ -57,9 +57,11 @@ export const MobileIcon = styled.div`
     transform: translate(-100%, 60%);
     font-size: 1.8rem;
     cursor: pointer;
+    color: #fff;
   }
 ` 
-export const Navmenu = styled.div`
+
+export const NavMenu = styled.div`
   display: flex;
   align-items: center;
   list-style: none;
@@ -88,4 +90,35 @@ export const NavLinks = styled(LinkSmoothScroll)`
   &.active {
     border-bottomL 3px solid #01bf71
   }
+`
+
+export const NavBtn = styled.nav `
+  display: flex;
+  align-items: center;
+
+  @media screen and (max-width: 768px) {
+    display: none
+  }
+`
+
+export const NavBtnLink = styled(LinkRouter) `
+  border-radius: 50px;
+  background: #01bf71;
+  white-space: nowrap;
+  padding: 10px 22px;
+  color: #010606;
+  font-size: 16px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+
+
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    background: #fff;
+    color: #010606;
+  }
+
 `
